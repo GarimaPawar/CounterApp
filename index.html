@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            
+            padding: 0;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            background-color:white;
+
+        }
+        .fullbody{
+        background-color:cyan;
+        height:700px;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .counter-box {
+            height: 550px;
+            width: 600px;
+            padding: 25px 25px;
+            background-color: hotpink;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            outline-color: none;
+            margin-top: 0px;
+            margin-bottom: 70px;
+        }
+
+        .btn {
+            margin-left: 120px;
+            margin-top: 0px;
+            cursor: pointer;
+
+        }
+
+        #increment {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 50px;
+            background-color: yellowgreen;
+            border: brown;
+            border-radius: 15px;
+            box-shadow: 0px 3px 4px #555;
+        }
+
+        #decrement {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 50px;
+            background-color: yellowgreen;
+            border: brown;
+            border-radius: 15px;
+            box-shadow: 0px 3px 4px #555;
+        }
+
+        .main {
+            height: 50px;
+            width: 50px;
+        }
+
+        .main .minbox {
+            height: 300px;
+            width: 320px;
+            margin: 50px 105px;
+            padding: 40px  20px 10px 30px;
+            background-color: black;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .main .minbox h2 {
+            align-items:center;
+            
+        }
+
+        #Count {
+
+            padding-left: 40px;
+            font-size: 35px;
+            color: blue;
+            position: absolute;
+
+        }
+
+        #countervalue {
+            padding-top: 50px;
+            padding-left: 105px;
+            font-size: 100px;
+            color: green;
+        }
+
+        .resetbtn {
+            padding-left: 200px;
+            padding-top: 270px;
+
+
+        }
+
+        #reset {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 45px;
+            padding-right: 45px;
+            border: none;
+            border-radius: 30px;
+            background-color: darkred;
+            
+            box-shadow: 2px 2px #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="color: red">Garima's CounterApp</h1>
+    </div>
+    <div class="fullbody">
+    <div calss="container">
+        <div class="counter-box">
+           
+            <div class="main">
+                <div class="minbox">
+        <h2 id="Count">Counter App</h2>
+                    <h1 id="countervalue">0</h1>
+                </div>
+          </div>
+     </div>
+            <div class="btn">
+                <button style="padding-right:30px;padding-left:30px;margin-right:40px;margin-left:50px;" id="increment">Increase</button>
+                <button style="padding-right:30px;padding-left:30px" id="decrement">Decrease</button>
+</div>
+        </div> 
+    <script>
+        let increment = document.querySelector("#increment");
+        let decrement = document.querySelector("#decrement");
+        let countervalue = document.querySelector("#countervalue");
+     
+
+        let counter = 0;
+        
+        increment.addEventListener("click", () => {
+            counter++;
+            countervalue.innerText = counter;
+        })
+            ;
+       
+        decrement.addEventListener("click", () => {
+            counter--;
+            countervalue.innerText = counter;
+        });
+        
+        
+    </script>
+
+</body>
+
+</html>
